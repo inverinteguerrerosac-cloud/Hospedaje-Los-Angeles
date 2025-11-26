@@ -1,4 +1,4 @@
-index.html
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -7,22 +7,28 @@ index.html
 <body>
 
   <h1>Hospedaje Los Ángeles</h1>
-  <p>Comodidad, limpieza y descanso en el corazón de la ciudad.</p>
+  <p>Confort, limpieza y tranquilidad para tu descanso.</p>
 
-  <h2>Sobre nosotros</h2>
-  <p>En Hospedaje Los Ángeles ofrecemos habitaciones cómodas, limpias y seguras para su descanso.</p>
+  <h2>Tipos de habitaciones</h2>
 
-  <h2>Servicios</h2>
-  <ul>
-    <li>Habitaciones individuales y familiares</li>
-    <li>Baño privado</li>
-    <li>Wi-Fi gratuito</li>
-    <li>Agua caliente</li>
-  </ul>
+  <h3>🛏 Habitación Simple</h3>
+  <p>Cama de 1 plaza, baño privado, agua caliente, Wi-Fi gratuito.</p>
 
-  <h2>Contacto</h2>
-  <p>📍 Dirección: Juanjuí, San Martín, Perú</p>
-  <p>📞 Teléfono / WhatsApp: 913 750 321</p>
+  <h3>🛌 Habitación Matrimonial</h3>
+  <p>Cama de 2 plazas, baño privado, TV, agua caliente, Wi-Fi.</p>
+
+  <h3>👨‍👩‍👧‍👦 Habitación Familiar</h3>
+  <p>Dos camas, baño privado, ideal para familias.</p>
+
+  <h2>Reservas</h2>
+  <p>Realiza tu reserva fácilmente por WhatsApp:</p>
+
+  <a href="https://wa.me/51913750321" target="_blank">
+    📲 Reservar por WhatsApp
+  </a>
+
+  <h2>Ubicación</h2>
+  <p>📍 Juanjuí, San Martín, Perú</p>
 
 </body>
 </html>
