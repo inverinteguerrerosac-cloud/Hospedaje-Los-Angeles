@@ -229,39 +229,48 @@
 
   <!-- FORMULARIO -->
  <form id="reservaForm">
-    <h2>📅 Reserva tu habitación</h2>
+  <h2>📅 Reserva tu habitación</h2>
 
-    <input type="text" id="nombre" placeholder="Nombre completo" required>
-    <input type="tel" id="telefono" placeholder="Teléfono / WhatsApp" required>
+  <input type="text" id="nombre" placeholder="Nombre completo" required>
+  <input type="tel" id="telefono" placeholder="Teléfono / WhatsApp" required>
 
-    <select id="habitacion" required>
-        <option disabled selected>Selecciona tu habitación</option>
-        <option>Habitación Simple</option>
-        <option>Habitación Matrimonial</option>
-        <option>Habitación Doble</option>
-        <option>Habitación Doble Deluxe</option>
-        <option>Habitación Triple</option>
-    </select>
+  <!-- FECHAS CON CALENDARIO FORZADO -->
+  <label>Fecha de entrada</label>
+  <input type="text" id="fechaEntrada" placeholder="Selecciona fecha de entrada"
+         onfocus="this.type='date'" required>
 
-    <textarea id="mensaje" placeholder="Mensaje adicional"></textarea>
+  <label>Fecha de salida</label>
+  <input type="text" id="fechaSalida" placeholder="Selecciona fecha de salida"
+         onfocus="this.type='date'" required>
 
-    <button type="button" onclick="enviarWhatsApp()">Enviar Reserva</button>
+  <select id="habitacion" required>
+    <option disabled selected>Selecciona tu habitación</option>
+    <option>Habitación Simple</option>
+    <option>Habitación Matrimonial</option>
+    <option>Habitación Doble</option>
+    <option>Habitación Doble Deluxe</option>
+    <option>Habitación Triple</option>
+  </select>
+
+  <textarea id="mensaje" placeholder="Mensaje adicional"></textarea>
+
+  <button type="button" onclick="enviarWhatsApp()">Enviar Reserva</button>
 </form>
 <script>
 function enviarWhatsApp() {
-    const nombre = document.getElementById("nombre").value;
-    const telefono = document.getElementById("telefono").value;
-    const fechaEntrada = document.getElementById("fechaEntrada").value;
-    const fechaSalida = document.getElementById("fechaSalida").value;
-    const habitacion = document.getElementById("habitacion").value;
-    const mensaje = document.getElementById("mensaje").value;
+  const nombre = document.getElementById("nombre").value;
+  const telefono = document.getElementById("telefono").value;
+  const fechaEntrada = document.getElementById("fechaEntrada").value;
+  const fechaSalida = document.getElementById("fechaSalida").value;
+  const habitacion = document.getElementById("habitacion").value;
+  const mensaje = document.getElementById("mensaje").value;
 
-    if (!nombre || !telefono || !fechaEntrada || !fechaSalida || habitacion === "Selecciona tu habitación") {
-        alert("Por favor, completa todos los campos.");
-        return;
-    }
+  if (!nombre || !telefono || !fechaEntrada || !fechaSalida || habitacion === "Selecciona tu habitación") {
+    alert("Por favor completa todos los campos obligatorios.");
+    return;
+  }
 
-    const texto = `📌 *Nueva Reserva*%0A%0A
+  const texto = `📌 *Nueva Reserva*%0A%0A
 👤 Nombre: ${nombre}%0A
 📞 Teléfono: ${telefono}%0A
 📅 Entrada: ${fechaEntrada}%0A
@@ -269,9 +278,9 @@ function enviarWhatsApp() {
 🛏️ Habitación: ${habitacion}%0A
 📝 Mensaje: ${mensaje}`;
 
-    const numero = "51913750321";
+  const numero = "51913750321";
 
-    window.open(`https://wa.me/${numero}?text=${texto}`, "_blank");
+  window.open(`https://wa.me/${numero}?text=${texto}`, "_blank");
 }
 </script>
 </div>
