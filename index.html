@@ -257,19 +257,19 @@ function enviarWhatsApp() {
     const mensaje = document.getElementById("mensaje").value;
 
     if (!nombre || !telefono || !fechaEntrada || !fechaSalida || habitacion === "Selecciona tu habitación") {
-        alert("Por favor completa todos los campos obligatorios.");
+        alert("Por favor, completa todos los campos.");
         return;
     }
 
     const texto = `📌 *Nueva Reserva*%0A%0A
-👤 *Nombre:* ${nombre}%0A
-📞 *Teléfono:* ${telefono}%0A
-📅 *Fecha de entrada:* ${fechaEntrada}%0A
-📅 *Fecha de salida:* ${fechaSalida}%0A
-🛏️ *Habitación:* ${habitacion}%0A
-📝 *Mensaje:* ${mensaje}`;
+👤 Nombre: ${nombre}%0A
+📞 Teléfono: ${telefono}%0A
+📅 Entrada: ${fechaEntrada}%0A
+📅 Salida: ${fechaSalida}%0A
+🛏️ Habitación: ${habitacion}%0A
+📝 Mensaje: ${mensaje}`;
 
-    const numero = "51913750321"; // Tu número
+    const numero = "51913750321";
 
     window.open(`https://wa.me/${numero}?text=${texto}`, "_blank");
 }
