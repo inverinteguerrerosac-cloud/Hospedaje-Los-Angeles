@@ -247,7 +247,6 @@
 
     <button type="button" onclick="enviarWhatsApp()">Enviar Reserva</button>
 </form>
-
 <script>
 function enviarWhatsApp() {
     const nombre = document.getElementById("nombre").value;
@@ -260,19 +259,17 @@ function enviarWhatsApp() {
         return;
     }
 
-    const texto = 
-        📌 *Nueva Reserva*%0A%0A +
-        👤 *Nombre:* ${nombre}%0A +
-        📞 *Teléfono:* ${telefono}%0A +
-        🛏️ *Habitación:* ${habitacion}%0A +
-        📝 *Mensaje:* ${mensaje};
+    const texto = `📌 *Nueva Reserva*%0A%0A
+👤 *Nombre:* ${nombre}%0A
+📞 *Teléfono:* ${telefono}%0A
+🛏️ *Habitación:* ${habitacion}%0A
+📝 *Mensaje:* ${mensaje}`;
 
     const numero = "51913750321"; // Tu número
 
-    window.open(https://wa.me/${numero}?text=${texto}, "_blank");
+    window.open(`https://wa.me/${numero}?text=${texto}`, "_blank");
 }
 </script>
-
 </div>
 
 <!-- BOTÓN WHATSAPP -->
