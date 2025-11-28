@@ -251,10 +251,12 @@
 function enviarWhatsApp() {
     const nombre = document.getElementById("nombre").value;
     const telefono = document.getElementById("telefono").value;
+    const fechaEntrada = document.getElementById("fechaEntrada").value;
+    const fechaSalida = document.getElementById("fechaSalida").value;
     const habitacion = document.getElementById("habitacion").value;
     const mensaje = document.getElementById("mensaje").value;
 
-    if (!nombre || !telefono || habitacion === "Selecciona tu habitación") {
+    if (!nombre || !telefono || !fechaEntrada || !fechaSalida || habitacion === "Selecciona tu habitación") {
         alert("Por favor completa todos los campos obligatorios.");
         return;
     }
@@ -262,6 +264,8 @@ function enviarWhatsApp() {
     const texto = `📌 *Nueva Reserva*%0A%0A
 👤 *Nombre:* ${nombre}%0A
 📞 *Teléfono:* ${telefono}%0A
+📅 *Fecha de entrada:* ${fechaEntrada}%0A
+📅 *Fecha de salida:* ${fechaSalida}%0A
 🛏️ *Habitación:* ${habitacion}%0A
 📝 *Mensaje:* ${mensaje}`;
 
